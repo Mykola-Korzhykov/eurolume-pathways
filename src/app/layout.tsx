@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={raleway.className}>
+      <body >
         <ProviderLayout>{children}</ProviderLayout>
         <SpeedInsights />
       </body>

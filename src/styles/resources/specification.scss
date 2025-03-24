@@ -55,7 +55,6 @@ h6,
 p,
 a {
     display: inline-block;
-    font-family: 'Playfair Display', serif !important;
 }
 
 h1,
@@ -65,6 +64,7 @@ h4,
 h5,
 h6 {
     @include reset-indents();
+    font-family: 'Playfair Display', serif !important;
 }
 
 h1,
@@ -89,14 +89,6 @@ h1 {
 
 h2 {
     @include font-size($h2-font-size);
-
-    @include mq($tablet-large) {
-        @include font-size(24px);
-    }
-
-    @include mq($tablet) {
-        @include font-size(20px);
-    }
 }
 
 h3 {
@@ -176,7 +168,7 @@ button {
     color: $text-color;
 
     &:hover {
-        background-color: $theme-color;
+        background-color: #0064a2;
         color: $white-1;
     }
 

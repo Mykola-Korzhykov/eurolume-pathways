@@ -29,34 +29,34 @@ const Header: FC<Props> = ({ isSticky, headerRef }) => {
             <div className="container">
                 <nav className={styles.navigation}>
                     <Logo />
+                    <ul className={`${styles.list} ${isOpen ? styles.show : ''}`}>
+                        <li className={styles.item}>
+                            <a href="#about" className={styles.link} onClick={anchorHandleClick}>
+                                About us
+                            </a>
+                        </li>
+                        <li className={styles.item}>
+                            <a href="#services" className={styles.link} onClick={anchorHandleClick}>
+                                Services
+                            </a>
+                        </li>
+                        <li className={styles.item}>
+                            <a href="#projects" className={styles.link} onClick={anchorHandleClick}>
+                                Projects
+                            </a>
+                        </li>
+                        <li className={styles.item}>
+                            <a href="#stages" className={styles.link} onClick={anchorHandleClick}>
+                                Stages
+                            </a>
+                        </li>
+                        <li className={styles.item}>
+                            <a href="#contacts" className={styles.link} onClick={anchorHandleClick}>
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
                     <div className={styles.right}>
-                        <ul className={`${styles.list} ${isOpen ? styles.show : ''}`}>
-                            <li className={styles.item}>
-                                <a href="#about" className={styles.link} onClick={anchorHandleClick}>
-                                    About us
-                                </a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#services" className={styles.link} onClick={anchorHandleClick}>
-                                    Services
-                                </a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#projects" className={styles.link} onClick={anchorHandleClick}>
-                                    Projects
-                                </a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#stages" className={styles.link} onClick={anchorHandleClick}>
-                                    Stages
-                                </a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#contacts" className={styles.link} onClick={anchorHandleClick}>
-                                    Contacts
-                                </a>
-                            </li>
-                        </ul>
                         <a href="tel:+16122597432" className={styles.phone}>+1 612 259 7432</a>
                         <button type="button"
                             aria-label="Toggle Menu"
@@ -66,6 +66,7 @@ const Header: FC<Props> = ({ isSticky, headerRef }) => {
                     </div>
                 </nav>
             </div>
+            <div className={styles.line}></div>
         </header>
     );
 }

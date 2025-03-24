@@ -6,7 +6,7 @@ import Footer from "./Footer/Footer";
 import { useAppDispatch, useAppSelector } from "@store/hook";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Raleway, Playfair_Display } from "next/font/google";
+import { Raleway, Playfair_Display, Montserrat } from "next/font/google";
 import { hideLoader } from "@store/slices/loaderSlice";
 import useOnlineStatus from "@hooks/useOnlineStatus";
 import useHasWindow from "@hooks/useHasWindows";
@@ -27,6 +27,12 @@ const RalewayFont = Raleway({
 });
 
 const PlayfairDisplayFont = Playfair_Display({
+    subsets: ["latin"],
+    display: "swap",
+    weight: ["400", "500", "600", '700'],
+});
+
+const montserrat = Montserrat({
     subsets: ["latin"],
     display: "swap",
     weight: ["400", "500", "600", '700'],
@@ -63,7 +69,7 @@ const Layout: FC<Props> = ({ children }) => {
     }, [dispatch]);
 
     return (
-        <div className={`next-layout ${RalewayFont.className} ${PlayfairDisplayFont.className}`}>
+        <div className={`next-layout ${RalewayFont.className}`}>
             <Loader />
 
             {isOnline && hasWindow && (

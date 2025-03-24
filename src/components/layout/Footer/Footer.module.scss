@@ -1,2 +1,146 @@
 /* ---- Footer ---- */
 @import '@resources';
+
+.wrapper {
+    background: url('/img/footer/background.png') no-repeat center top / cover;
+    padding: 50px 0;
+}
+
+.title {
+    width: 390px;
+
+    & span {
+        color: $theme-color
+    }
+
+    @include mq($phone) {
+        width: 100%;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    @include mq($tablet-large) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include mq($tablet-large) {
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+}
+
+.arrow {
+    @include transition();
+    display: block;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+
+    &:hover {
+        @include transition();
+        opacity: 0.8;
+    }
+}
+
+.button {
+    @include font-size(22px);
+    text-transform: uppercase;
+    margin-top: 20px;
+    width: 300px;
+    padding: 25px 35px !important;
+}
+
+.subtitle {
+    font-size: 36px !important;
+    font-family: 'Raleway', sans-serif !important;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+
+    @include mq(840) {
+        grid-template-columns: repeat(1, 230px);
+        row-gap: 30px;
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+}
+
+.link {
+    @include font-size(24px);
+    @include transition();
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        @include transition();
+        color: $theme-color;
+    }
+}
+
+.phone {
+    @include transition();
+    margin-bottom: 10px;
+
+    &:hover {
+        @include transition();
+        opacity: 0.8;
+    }
+}
+
+.social {
+    @include transition();
+    display: inline-block;
+
+    &:hover {
+        @include transition();
+        opacity: 0.8;
+    }
+}
+
+.socialIcon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-top: 10px;
+}
+
+.bottom {
+    @include flexible();
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.rights {
+    @include font-size(18px);
+}
+
+.owner {
+    @include font-size(18px);
+    font-weight: 300;
+}
