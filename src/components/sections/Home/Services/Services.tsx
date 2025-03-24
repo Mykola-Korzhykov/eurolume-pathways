@@ -8,9 +8,9 @@ const Services: FC = () => {
     return (
         <section className={styles.wrapper} id="services">
             <div className="container">
-                <h1 className={styles.title}><span>Services</span> We Offer</h1>
-                <div className={styles.description}>A little bit about the services we offer</div>
-                <ul className={styles.list}>
+                <h1 className={styles.title} data-aos="fade-up"><span>Services</span> We Offer</h1>
+                <div className={styles.description} data-aos="fade-up">A little bit about the services we offer</div>
+                <ul className={styles.list} data-aos="zoom-in">
                     <li className={styles.item}>
                         <div className={styles.image}>
                             <Image src="/img/services/freelance.png" blurDataURL="/img/services/freelance.png" placeholder='blur' layout='fill' alt="Freelance" />
@@ -33,7 +33,7 @@ const Services: FC = () => {
                         <p className={styles.text}>We handle the entire installation process with precision—embedding LEDs, wiring smart systems, and ensuring long-lasting, weatherproof performance.</p>
                     </li>
                 </ul>
-                <button type="button" className={`${styles.button} themeButton`}>Free Estimate</button>
+                <button type="button" className={`${styles.button} themeButton`} data-aos="fade-down">Free Estimate</button>
             </div>
         </section>
     )
