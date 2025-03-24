@@ -18,7 +18,7 @@ const Header: FC<Props> = ({ isSticky, headerRef }) => {
     const pathname = usePathname()
 
     const toggleMenu = () => {
-        document.body.classList.toggle('lock-scroll');
+        //document.body.classList.toggle('lock-scroll');
         setIsOpen(!isOpen);
     }
 

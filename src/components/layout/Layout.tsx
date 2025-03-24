@@ -54,7 +54,7 @@ const Layout: FC<Props> = ({ children }) => {
     useEffect(() => {
         setTimeout(() => {
             dispatch(hideLoader());
-            Aos.init({ duration: 500 });
+            Aos.init({ duration: 500, once: true });
             window.scrollTo(0, 0);
             window.addEventListener('scroll', () => {
                 setHeaderHeight(headerRef.current?.offsetHeight);
