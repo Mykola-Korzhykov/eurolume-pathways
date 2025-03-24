@@ -67,6 +67,7 @@
 .phone {
     @include flexible();
     column-gap: 20px;
+    align-items: flex-start;
 
     & a {
         @include transition();
@@ -83,6 +84,7 @@
 
 .text {
     @include font-size(28px);
+    text-align: left !important;
 
     @include mq($phablet) {
         @include font-size(16px);

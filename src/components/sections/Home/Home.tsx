@@ -4,6 +4,7 @@ import styles from './Home.module.scss'
 import Offer from './Offer/Offer'
 import About from './About/About'
 import Services from './Services/Services'
+import Stages from './Stages/Stages'
 
 const Home: FC = () => {
     return (
@@ -11,6 +12,7 @@ const Home: FC = () => {
             <Offer />
             <About />
             <Services />
+            <Stages />
         </>
     )
 }

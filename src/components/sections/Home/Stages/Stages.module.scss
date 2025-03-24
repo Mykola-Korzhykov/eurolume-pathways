@@ -1,0 +1,98 @@
+/* ---- Stages ----  */
+@import '@resources';
+
+.title {
+    @include font-size(58px);
+    display: block;
+    text-align: center;
+
+    & span {
+        color: $theme-color;
+    }
+
+    @include mq($tablet-large) {
+        @include font-size(52px);
+    }
+
+    @include mq($tablet) {
+        @include font-size(42px);
+    }
+}
+
+.list {
+    @include flexible();
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+
+    @include mq($tablet-large) {
+        justify-content: center;
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.label {
+    @include font-size(28px);
+    text-align: center;
+
+    @include mq($tablet-large) {
+        @include font-size(26px);
+    }
+
+    @include mq($tablet) {
+        @include font-size(20px);
+    }
+}
+
+.text {
+    @include font-size(24px);
+    text-align: center;
+
+    @include mq($tablet-large) {
+        @include font-size(20px);
+    }
+
+    @include mq($tablet) {
+        @include font-size(16px);
+    }
+}
+
+.icon {
+    width: 164px;
+    height: 164px;
+    margin: 0 auto;
+
+    @include mq($tablet-large) {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.button {
+    margin: 50px auto 0;
+
+    @include mq($tablet-large) {
+        margin: 20px auto 0;
+    }
+
+    @include mq($tablet-large) {
+        @include font-size(22px);
+    }
+
+    @include mq($phablet) {
+        @include font-size(18px);
+        margin-top: 30px;
+    }
+
+    @include mq($phone) {
+        @include font-size(14px);
+    }
+}
