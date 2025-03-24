@@ -10,9 +10,6 @@
     @include mq($phablet) {
         scroll-margin-top: 100px;
     }
-
-    cursor: url("/cursors/pointer.cur"),
-    auto !important;
 }
 
 body,
@@ -250,12 +247,12 @@ input::-webkit-inner-spin-button {
     flex-grow: 1;
 }
 
-.aos-init,
-.next-page,
-.container {
-    position: relative;
-    z-index: 2;
-}
+// .aos-init,
+// .next-page,
+// .container {
+//     position: relative;
+//     z-index: 2;
+// }
 
 .container {
     @include responsive-container();

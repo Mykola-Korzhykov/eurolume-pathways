@@ -61,6 +61,7 @@
     text-align: center;
     margin: 0 auto;
     padding: 100px 0;
+    margin-bottom: 100px;
     background: url('/img/header/background.png') no-repeat center top / cover;
 
     @include mq($tablet-large) {
@@ -69,6 +70,14 @@
 
     @include mq($phone) {
         padding: 25px 0;
+    }
+
+    @include mq($tablet-large) {
+        margin-bottom: 80px;
+    }
+
+    @include mq($phone) {
+        margin-bottom: 64px;
     }
 }
 
