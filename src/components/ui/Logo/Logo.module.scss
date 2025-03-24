@@ -1,2 +1,29 @@
 /* ---- Logo ---- */
 @import '@resources';
+
+.wrapper {
+    @include flexible();
+    @include transition();
+    width: fit-content;
+
+    &:hover {
+        @include transition();
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+
+.icon {
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+
+.title {
+    @include font-size(24px);
+    font-weight: 600;
+
+    @include mq(520) {
+        @include font-size(15px);
+    }
+}

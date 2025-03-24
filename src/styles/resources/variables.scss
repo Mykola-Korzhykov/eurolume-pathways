@@ -52,10 +52,10 @@ $container-tablet-gutter: 28;
 $container-phablet-gutter: 24;
 
 /* -- Gutters -- */
-$header-padding-desktop-gutter: 15px;
-$header-padding-tablet-large-gutter: 10px;
-$header-padding-tablet-gutter: 10px;
-$header-padding-phablet-gutter: 10px;
+$header-padding-desktop-gutter: 35px;
+$header-padding-tablet-large-gutter: 30px;
+$header-padding-tablet-gutter: 30px;
+$header-padding-phablet-gutter: 20px;
 
 $section-gutter: 125px;
 $scroll-margin-top: $section-gutter + $header-padding-tablet-gutter * 2;

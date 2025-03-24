@@ -159,18 +159,18 @@
 
 /* -- Menu Top Calculate -- */
 @mixin menu-top-calc() {
-    top: calc($header-padding-desktop-gutter + 80px + $header-padding-desktop-gutter );
+    top: calc($header-padding-desktop-gutter + 50px + $header-padding-desktop-gutter );
 
     @include mq($tablet-large) {
-        top: calc($header-padding-tablet-large-gutter + 80px + $header-padding-tablet-large-gutter );
+        top: calc($header-padding-tablet-large-gutter + 50px + $header-padding-tablet-large-gutter );
     }
 
     @include mq($tablet) {
-        top: calc($header-padding-tablet-gutter + 80px + $header-padding-tablet-gutter );
+        top: calc($header-padding-tablet-gutter + 50px + $header-padding-tablet-gutter );
     }
 
     @include mq($phablet) {
-        top: calc($header-padding-phablet-gutter + 80px + $header-padding-phablet-gutter );
+        top: calc($header-padding-phablet-gutter + 50px + $header-padding-phablet-gutter );
     }
 }
 
