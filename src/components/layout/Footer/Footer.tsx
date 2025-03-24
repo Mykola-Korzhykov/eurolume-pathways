@@ -7,8 +7,11 @@ import ArrowIcon from '@img/footer/arrow.svg'
 import styles from "./Footer.module.scss";
 import anchorClick from '@helpers/anchorClick';
 import getAppWorkYears from '@helpers/getAppWorkYears';
+import { usePathname } from 'next/navigation';
 
 const Footer: FC = () => {
+    const pathname = usePathname();
+
     const anchorHandleClick = (e: MouseEvent<HTMLAnchorElement>) => {
         anchorClick(e);
     }
@@ -27,29 +30,31 @@ const Footer: FC = () => {
                     </div>
                 </div>
                 <div className={styles.grid}>
-                    <div className={styles.column}>
-                        <h3 className={styles.subtitle}>Navigation</h3>
-                        <ul className={styles.list}>
-                            <li className={styles.item}>
-                                <a href="#offer" className={styles.link} onClick={anchorHandleClick}>Home</a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#about" className={styles.link} onClick={anchorHandleClick}>About us</a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#services" className={styles.link} onClick={anchorHandleClick}>Services</a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#projects" className={styles.link} onClick={anchorHandleClick}>Projects</a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#stages" className={styles.link} onClick={anchorHandleClick}>Stages</a>
-                            </li>
-                            <li className={styles.item}>
-                                <a href="#Contacts" className={styles.link} onClick={anchorHandleClick}>Contacts</a>
-                            </li>
-                        </ul>
-                    </div>
+                    {pathname == '/' && (
+                        <div className={styles.column}>
+                            <h3 className={styles.subtitle}>Navigation</h3>
+                            <ul className={styles.list}>
+                                <li className={styles.item}>
+                                    <a href="#offer" className={styles.link} onClick={(e: any) => anchorHandleClick(e)}>Home</a>
+                                </li>
+                                <li className={styles.item}>
+                                    <a href="#about" className={styles.link} onClick={anchorHandleClick}>About us</a>
+                                </li>
+                                <li className={styles.item}>
+                                    <a href="#services" className={styles.link} onClick={anchorHandleClick}>Services</a>
+                                </li>
+                                <li className={styles.item}>
+                                    <a href="#projects" className={styles.link} onClick={anchorHandleClick}>Projects</a>
+                                </li>
+                                <li className={styles.item}>
+                                    <a href="#stages" className={styles.link} onClick={anchorHandleClick}>Stages</a>
+                                </li>
+                                <li className={styles.item}>
+                                    <a href="#Contacts" className={styles.link} onClick={anchorHandleClick}>Contacts</a>
+                                </li>
+                            </ul>
+                        </div>
+                    )}
                     <div className={styles.column}>
                         <h3 className={styles.subtitle}>Contacts</h3>
                         <a href="tel:+16122597432" className={styles.phone}>+1 612 259 7432</a>
