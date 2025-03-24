@@ -1,0 +1,55 @@
+/* ---- Header ---- */
+@import '@resources';
+
+.wrapper {
+    @include transition();
+    width: 100%;
+    padding: $header-padding-desktop-gutter 0;
+
+    @include mq($tablet-large) {
+        padding: $header-padding-tablet-large-gutter 0;
+    }
+
+    @include mq($tablet) {
+        padding: $header-padding-tablet-gutter 0;
+    }
+
+    @include mq($phablet) {
+        padding: $header-padding-phablet-gutter 0;
+    }
+}
+
+.sticky {
+    @include transition();
+    position: fixed;
+    z-index: 100;
+    background: #fff !important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navigation {
+    @include flexible();
+    justify-content: space-between;
+}
+
+.right {
+    @include flexible();
+
+    @include mq($tablet-large) {
+        flex-direction: row-reverse;
+    }
+}
+
+.button {
+    @include font-size(18px);
+    width: rem(180);
+    margin-left: 30px;
+
+    @include mq($tablet-large) {
+        margin-left: 0;
+    }
+
+    @include mq($phone) {
+        width: rem(100);
+    }
+}
