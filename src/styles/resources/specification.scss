@@ -26,7 +26,7 @@ html {
 
 body {
     @include reset-indents();
-    background: $background-color;
+    background: #000;
     @include font-size($font-size);
     font-weight: $font-weight;
     color: $font-color;
@@ -166,6 +166,7 @@ button {
     text-align: center;
     display: block;
     color: $text-color;
+    text-transform: uppercase;
 
     &:hover {
         background-color: #0064a2;
