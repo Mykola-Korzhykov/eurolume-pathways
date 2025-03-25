@@ -32,7 +32,7 @@ const Header: FC<Props> = ({ isSticky, headerRef }) => {
             <div className="container">
                 <nav className={styles.navigation}>
                     <Logo />
-                    {pathname == '/' && (
+                    {(pathname == '/') && (
                         <ul className={`${styles.list} ${isOpen ? styles.show : ''}`}>
                             <li className={styles.item}>
                                 <a href="#about" className={styles.link} onClick={anchorHandleClick}>

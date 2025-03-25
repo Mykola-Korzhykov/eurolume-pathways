@@ -56,6 +56,7 @@ const Layout: FC<Props> = ({ children }) => {
             dispatch(hideLoader());
             Aos.init({ duration: 500, once: true });
             window.scrollTo(0, 0);
+            localStorage.removeItem('isApplicationSent')
             window.addEventListener('scroll', () => {
                 setHeaderHeight(headerRef.current?.offsetHeight);
 

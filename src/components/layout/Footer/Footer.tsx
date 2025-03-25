@@ -17,10 +17,10 @@ const Footer: FC = () => {
     }
 
     return (
-        <footer className={styles.wrapper}>
+        <footer className={styles.wrapper} id="contacts">
             <div className="container">
                 <Logo />
-                <div className={styles.row}>
+                <div className={styles.row} data-aos="fade-up">
                     <h2 className={styles.title}>Our <span className="theme-color">Contact Information</span></h2>
                     <div className={styles.block}>
                         <a href="#offer" className={styles.arrow} onClick={anchorHandleClick}>
@@ -29,7 +29,7 @@ const Footer: FC = () => {
                         <button type="button" className={`${styles.button} themeButton`}>Free Estimate</button>
                     </div>
                 </div>
-                <div className={styles.grid}>
+                <div className={styles.grid} data-aos="fade-right">
                     {pathname == '/' && (
                         <div className={styles.column}>
                             <h3 className={styles.subtitle}>Navigation</h3>
@@ -71,7 +71,7 @@ const Footer: FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.bottom}>
+                <div className={styles.bottom} data-aos="fade-up">
                     <p className={styles.rights}>{getAppWorkYears(2025)} © All rights reserved</p>
                     <p className={styles.owner}>CEO: Serhii Dublii</p>
                 </div>

@@ -7,7 +7,7 @@ import styles from './Logo.module.scss';
 
 const Logo: FC = () => {
     return (
-        <a href="#offer" className={styles.wrapper} onClick={anchorClick}>
+        <a href="#offer" className={styles.wrapper} onClick={anchorClick} data-aos="zoom-in">
             <div className={styles.icon}>
                 <LogoIcon />
             </div>
