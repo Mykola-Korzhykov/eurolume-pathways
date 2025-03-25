@@ -264,12 +264,20 @@ input::-webkit-inner-spin-button {
 
 /* ---- Other ---- */
 .swal2-container {
-    font-family: "Raleway" !important;
+    font-family: "Raleway", sans-serif !important;
+}
+
+.swal2-html-container {
+    overflow-x: hidden !important;
 }
 
 .swal2-styled.swal2-confirm {
     border-radius: 0 !important;
     background-color: $theme-color !important;
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 20px !important;
 }
 
 .swal2-icon.swal2-success .swal2-success-ring {
@@ -285,7 +293,6 @@ input::-webkit-inner-spin-button {
     background: $black-1 !important;
     border-radius: 15px !important;
     color: $white-1 !important;
-    border: 2px solid $theme-color !important;
 }
 
 .swal2-title {
@@ -295,4 +302,9 @@ input::-webkit-inner-spin-button {
 .swal2-confirm {
     @include pointer();
     background-color: $theme-color !important;
+}
+
+.swal2-input {
+    width: 80% !important;
+    margin: 10px 0 !important;
 }

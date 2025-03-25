@@ -1,0 +1,102 @@
+/* ---- Projects ---- */
+@import '@resources';
+
+.title {
+    display: block;
+    text-align: center;
+
+    & span {
+        color: $theme-color;
+    }
+}
+
+.row {
+    position: relative;
+    @include flexible();
+    justify-content: space-between;
+    margin-top: 50px;
+    overflow-x: hidden;
+
+    @include mq($tablet) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.subtitle {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+
+    & span {
+        font-family: 'Raleway', sans-serif;
+        color: $theme-color;
+        font-weight: 600;
+    }
+}
+
+.leftImage,
+.rightImage {
+    @include transition();
+    position: relative;
+    width: 373px;
+    height: 386px;
+
+    @include mq($tablet) {
+        width: 200px;
+        height: 200px;
+    }
+
+    &:hover {
+        @include transition();
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.leftImage {
+    margin-left: -100px;
+
+    @include mq($tablet-large) {
+        margin-left: -200px;
+    }
+
+    @include mq($tablet) {
+        margin-left: 0;
+    }
+}
+
+.rightImage {
+    margin-right: -100px;
+
+    @include mq($tablet-large) {
+        margin-right: -200px;
+    }
+
+    @include mq($tablet) {
+        margin-right: 0;
+    }
+}
+
+.more {
+    @include font-size(20px);
+    @include transition();
+    display: block;
+    text-decoration: underline;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px 20px;
+    margin-top: 30px;
+    color: #fff;
+    margin: 30px auto 0;
+    cursor: pointer;
+
+    &:hover {
+        @include transition();
+        background: #fff;
+        color: $theme-color;
+    }
+}

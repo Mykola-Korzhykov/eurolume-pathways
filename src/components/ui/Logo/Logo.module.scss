@@ -5,6 +5,7 @@
     @include flexible();
     @include transition();
     width: fit-content;
+    cursor: pointer;
 
     &:hover {
         @include transition();
@@ -17,6 +18,11 @@
     display: block;
     width: 36px;
     height: 36px;
+    overflow: hidden;
+
+    & svg {
+        overflow: hidden;
+    }
 }
 
 .title {
