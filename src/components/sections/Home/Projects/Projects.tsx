@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './Projects.module.scss'
+import { estimate } from '@helpers/estimate'
 
 const Projects: FC = () => {
     return (
@@ -22,7 +23,7 @@ const Projects: FC = () => {
                     </div>
                     <div className={styles.center}>
                         <h3 className={styles.subtitle}><span>Make your choice</span></h3>
-                        <button type="button" className={`${styles.button} themeButton`}>Free Estimate</button>
+                        <button type="button" className={`${styles.button} themeButton`} onClick={estimate}>Free Estimate</button>
                     </div>
                     <div className={styles.right}>
                         <h3 className={styles.subtitle}>Projects</h3>
