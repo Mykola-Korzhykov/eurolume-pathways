@@ -3,6 +3,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 
 import styles from './Services.module.scss'
+import { estimate } from '@helpers/estimate'
 
 const Services: FC = () => {
     return (
@@ -33,7 +34,7 @@ const Services: FC = () => {
                         <p className={styles.text}>We handle the entire installation process with precision—embedding LEDs, wiring smart systems, and ensuring long-lasting, weatherproof performance.</p>
                     </li>
                 </ul>
-                <button type="button" className={`${styles.button} themeButton`} data-aos="fade-down">Free Estimate</button>
+                <button type="button" className={`${styles.button} themeButton`} data-aos="fade-down" onClick={estimate}>Free Estimate</button>
             </div>
         </section>
     )

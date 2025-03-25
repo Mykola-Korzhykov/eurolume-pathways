@@ -7,6 +7,7 @@ import PencilIcon from '@img/stages/pencil.svg'
 import CheckIcon from '@img/stages/check.svg'
 
 import styles from './Stages.module.scss'
+import { estimate } from '@helpers/estimate'
 
 const Stages: FC = () => {
     return (
@@ -50,7 +51,7 @@ const Stages: FC = () => {
                         <p className={styles.text}>Our expert team installs your seamless, weatherproof LED system, ensuring long-lasting elegance, functionality, and smart control integration.</p>
                     </li>
                 </ul>
-                <button type="button" className={`${styles.button} themeButton`} data-aos="fade-down">Free Estimate</button>
+                <button type="button" className={`${styles.button} themeButton`} data-aos="fade-down" onClick={estimate}>Free Estimate</button>
             </div>
         </section>
     )

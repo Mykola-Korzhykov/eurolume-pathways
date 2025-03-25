@@ -8,6 +8,7 @@ import styles from "./Footer.module.scss";
 import anchorClick from '@helpers/anchorClick';
 import getAppWorkYears from '@helpers/getAppWorkYears';
 import { usePathname } from 'next/navigation';
+import { estimate } from '@helpers/estimate';
 
 const Footer: FC = () => {
     const pathname = usePathname();
@@ -26,7 +27,7 @@ const Footer: FC = () => {
                         <a href="#offer" className={styles.arrow} onClick={anchorHandleClick}>
                             <ArrowIcon />
                         </a>
-                        <button type="button" className={`${styles.button} themeButton`}>Free Estimate</button>
+                        <button type="button" className={`${styles.button} themeButton`} onClick={estimate}>Free Estimate</button>
                     </div>
                 </div>
                 <div className={styles.grid} data-aos="fade-right">

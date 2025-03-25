@@ -4,6 +4,7 @@ import Image from 'next/image';
 import PhoneIcon from '@img/phone.svg'
 
 import styles from './About.module.scss'
+import { estimate } from '@helpers/estimate';
 
 const About: FC = () => {
     return (
@@ -19,7 +20,7 @@ const About: FC = () => {
                             </div>
                             <p className={styles.text}>Call us today at <a href="tel:+16122597432">+1 612 259 7432</a> to schedule your free consultation!</p>
                         </div>
-                        <button type="button" className={`${styles.button} themeButton`}>Free Estimate</button>
+                        <button type="button" className={`${styles.button} themeButton`} onClick={estimate}>Free Estimate</button>
                     </div>
                     <div className={styles.image} data-aos="fade-left">
                         <Image src="/img/about.png" blurDataURL='/img/about.png' placeholder='blur' layout='fill' alt="Lighting" />
