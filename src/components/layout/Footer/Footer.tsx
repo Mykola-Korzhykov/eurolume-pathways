@@ -58,7 +58,8 @@ const Footer: FC = () => {
                     )}
                     <div className={styles.column}>
                         <h3 className={styles.subtitle}>Contacts</h3>
-                        <a href="tel:+16122597432" className={styles.phone}>+1 612 259 7432</a>
+                        <a href="tel:+16124593533" className={styles.phone}>+1 612 459 3533</a>
+                        <a href="mailto:serhii@eurolume.com" className={styles.phone}>serhii@eurolume.com</a>
                     </div>
                     <div className={styles.column}>
                         <h3 className={styles.subtitle}>Social medias</h3>

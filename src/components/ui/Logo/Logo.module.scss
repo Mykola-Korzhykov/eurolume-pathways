@@ -16,14 +16,20 @@
 
 .icon {
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 150px;
+    height: 70px;
     overflow: hidden;
 
     & svg {
         overflow: hidden;
     }
 }
+
+// .icon {
+//     position: relative;
+//     width: 373px;
+//     height: 153px;
+// }
 
 .title {
     @include font-size(24px);

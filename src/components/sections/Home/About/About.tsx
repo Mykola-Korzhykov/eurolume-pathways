@@ -18,7 +18,7 @@ const About: FC = () => {
                             <div className={styles.icon}>
                                 <PhoneIcon />
                             </div>
-                            <p className={styles.text}>Call us today at <a href="tel:+16122597432">+1 612 259 7432</a> to schedule your free consultation!</p>
+                            <p className={styles.text}>Call us today at <a href="tel:+6124593533">+1 612 459 3533</a> to schedule your free consultation!</p>
                         </div>
                         <button type="button" className={`${styles.button} themeButton`} onClick={estimate}>Free Estimate</button>
                     </div>

@@ -62,7 +62,7 @@ const Header: FC<Props> = ({ isSticky, headerRef }) => {
                         </ul>
                     )}
                     <div className={styles.right}>
-                        <a href="tel:+16122597432" className={styles.phone}>+1 612 259 7432</a>
+                        <a href="tel:+16124593533" className={styles.phone}>+1 612 459 3533</a>
                         <button type="button"
                             aria-label="Toggle Menu"
                             className={`${styles.open_btn} ${isOpen ? styles.close_btn : ''}`}
