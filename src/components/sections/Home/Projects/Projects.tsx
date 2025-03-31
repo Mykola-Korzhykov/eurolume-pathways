@@ -15,9 +15,9 @@ const Projects: FC = () => {
                 </h1>
                 <div className={styles.row}>
                     <div className={styles.left}>
-                        <h3 className={styles.subtitle}>Inspirations</h3>
-                        <div className={styles.leftImage}>
-                            <Image src="/img/projects/left.jpg" blurDataURL="/img/projects/left.jpg" alt="Inspirations" layout='fill' />
+                        <h3 className={styles.subtitle}>Projects</h3>
+                        <div className={styles.rightImage}>
+                            <Image src="/img/projects/right.jpg" blurDataURL="/img/projects/right.jpg" alt="Projects" layout='fill' />
                         </div>
                         <Link href="/gallery" className={styles.more}>See More</Link>
                     </div>
@@ -26,9 +26,9 @@ const Projects: FC = () => {
                         <button type="button" className={`${styles.button} themeButton`} onClick={estimate}>Free Estimate</button>
                     </div>
                     <div className={styles.right}>
-                        <h3 className={styles.subtitle}>Projects</h3>
-                        <div className={styles.rightImage}>
-                            <Image src="/img/projects/right.jpg" blurDataURL="/img/projects/right.jpg" alt="Projects" layout='fill' />
+                        <h3 className={styles.subtitle}>Inspirations</h3>
+                        <div className={styles.leftImage}>
+                            <Image src="/img/projects/left.jpg" blurDataURL="/img/projects/left.jpg" alt="Inspirations" layout='fill' />
                         </div>
                         <Link href="/gallery" className={styles.more}>See More</Link>
                     </div>

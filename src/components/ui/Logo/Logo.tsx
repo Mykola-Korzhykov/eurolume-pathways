@@ -1,6 +1,7 @@
 import { FC } from 'react';
+import Image from 'next/image';
 
-import LogoIcon from '@img/header/logo.svg'
+import LogoIcon from '@img/logo.svg'
 
 import anchorClick from '@helpers/anchorClick';
 import styles from './Logo.module.scss';
@@ -11,7 +12,10 @@ const Logo: FC = () => {
             <div className={styles.icon}>
                 <LogoIcon />
             </div>
-            <p className={styles.title}>EuroLume Pathways</p>
+            {/* <div className={styles.icon}>
+                <Image src="/img/logo.png" blurDataURL='/img/logo.png' alt="Logo" placeholder='blur' layout='fill' />
+            </div> */}
+            {/* <p className={styles.title}>EuroLume Pathways</p> */}
         </a>
     );
 }
