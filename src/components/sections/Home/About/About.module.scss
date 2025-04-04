@@ -1,12 +1,18 @@
 /* ---- About ---- */
 @import '@resources';
 
+.wrapper {
+    @include mq($tablet-large) {
+        background: url('/img/about.png') no-repeat center top / cover;
+    }
+}
+
 .row {
     @include flexible();
     justify-content: space-between;
 
     @include mq($tablet-large) {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 
@@ -37,6 +43,10 @@
     position: relative;
     width: 377px;
     height: 501px;
+
+    @include mq($tablet-large) {
+        display: none;
+    }
 
     @include mq($phablet) {
         width: 90%;
