@@ -5,18 +5,18 @@ const getConfig = (): any => {
 
     return {
         title: {
-            default: "Home | EuroLume Pathways",
-            template: `%s | EuroLume Pathways`,
+            default: "Home | EuroLume",
+            template: `%s | EuroLume`,
         },
-        description: `EuroLume Pathways - landing page about company which provides led strips.`,
+        description: `EuroLume - landing page about company which provides led strips.`,
         openGraph: {
             type: "website",
             images: [{ url: preview.src, alt: "Preview Image" }],
-            title: `EuroLume Pathways`,
-            description: `EuroLume Pathways - landing page about company which provides led strips.`,
+            title: `EuroLume`,
+            description: `EuroLume - landing page about company which provides led strips.`,
             locale: "en",
             url: "localhost",
-            siteName: "EuroLume Pathways",
+            siteName: "EuroLume",
         },
         manifest: "/favicons/manifest.json",
         twitter: {

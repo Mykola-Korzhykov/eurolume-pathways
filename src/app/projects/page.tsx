@@ -8,8 +8,8 @@ import { FC } from "react";
 const GalleryPage: FC = () => {
     return (
         <>
-            <Metadata seoTitle="Gallery | EuroLume" seoDescription="Project Page" />
-            <div className="next-page"><GalleryC /></div>
+            <Metadata seoTitle="Projects | EuroLume" seoDescription="Project Page" />
+            <div className="next-page"><ProjectsC /></div>
         </>
     );
 };

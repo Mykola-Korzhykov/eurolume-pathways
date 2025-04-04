@@ -17,9 +17,9 @@ const Projects: FC = () => {
                     <div className={styles.left}>
                         <h3 className={styles.subtitle}>Projects</h3>
                         <div className={styles.rightImage}>
-                            <Image src="/img/projects/right.jpg" blurDataURL="/img/projects/right.jpg" alt="Projects" layout='fill' />
+                            <Image src="/img/projects/project.jpg" blurDataURL="/img/projects/project.jpg" alt="Projects" layout='fill' />
                         </div>
-                        <Link href="/gallery" className={styles.more}>See More</Link>
+                        <Link href="/projects" className={styles.more}>See More</Link>
                     </div>
                     <div className={styles.center}>
                         <h3 className={styles.subtitle}><span>Make your choice</span></h3>
@@ -28,9 +28,9 @@ const Projects: FC = () => {
                     <div className={styles.right}>
                         <h3 className={styles.subtitle}>Inspirations</h3>
                         <div className={styles.leftImage}>
-                            <Image src="/img/projects/left.jpg" blurDataURL="/img/projects/left.jpg" alt="Inspirations" layout='fill' />
+                            <Image src="/img/projects/inspiration.jpg" blurDataURL="/img/projects/inspiration.jpg" alt="Inspirations" layout='fill' />
                         </div>
-                        <Link href="/gallery" className={styles.more}>See More</Link>
+                        <Link href="/inspirations" className={styles.more}>See More</Link>
                     </div>
                 </div>
             </div>
