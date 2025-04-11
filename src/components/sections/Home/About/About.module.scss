@@ -1,124 +1,125 @@
 /* ---- About ---- */
-@import '@resources';
+@import "@resources";
 
 .wrapper {
-    @include mq($tablet-large) {
-        background: url('/img/about.png') no-repeat center top / cover;
-    }
+  @include mq($tablet-large) {
+    background: url("/img/about.png") no-repeat center top / cover;
+    margin-bottom: $section-gutter;
+  }
 }
 
 .row {
-    @include flexible();
-    justify-content: space-between;
+  @include flexible();
+  justify-content: space-between;
 
-    @include mq($tablet-large) {
-        flex-direction: column-reverse;
-    }
+  @include mq($tablet-large) {
+    flex-direction: column-reverse;
+  }
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    row-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  row-gap: 20px;
 
-    @include mq($laptop) {
-        width: 50%;
-    }
+  @include mq($laptop) {
+    width: 50%;
+  }
 
-    @include mq($tablet-large) {
-        width: 90%;
-        text-align: center;
-        margin: 0 auto;
-    }
+  @include mq($tablet-large) {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .icon {
-    display: block;
-    width: 55px;
-    height: 55px;
+  display: block;
+  width: 55px;
+  height: 55px;
 }
 
 .image {
-    position: relative;
-    width: 377px;
-    height: 501px;
+  position: relative;
+  width: 377px;
+  height: 501px;
 
-    @include mq($tablet-large) {
-        display: none;
-    }
+  @include mq($tablet-large) {
+    display: none;
+  }
 
-    @include mq($phablet) {
-        width: 90%;
-        height: 400px;
-    }
+  @include mq($phablet) {
+    width: 90%;
+    height: 400px;
+  }
 }
 
 .title {
-    @include font-size(46px);
+  @include font-size(46px);
 
-    & span {
-        color: $theme-color;
-    }
+  & span {
+    color: $theme-color;
+  }
 
-    @include mq($phablet) {
-        @include font-size(24px);
-    }
+  @include mq($phablet) {
+    @include font-size(24px);
+  }
 }
 
 .description {
-    @include font-size(22px);
+  @include font-size(22px);
 
-    @include mq($phablet) {
-        @include font-size(14px);
-    }
+  @include mq($phablet) {
+    @include font-size(14px);
+  }
 }
 
 .phone {
-    @include flexible();
-    column-gap: 20px;
-    align-items: flex-start;
+  @include flexible();
+  column-gap: 20px;
+  align-items: flex-start;
 
-    & a {
-        @include transition();
-        display: inline;
-        cursor: pointer;
-        color: $theme-color;
+  & a {
+    @include transition();
+    display: inline;
+    cursor: pointer;
+    color: $theme-color;
 
-        &:hover {
-            @include transition();
-            opacity: 0.8;
-        }
+    &:hover {
+      @include transition();
+      opacity: 0.8;
     }
+  }
 }
 
 .text {
-    @include font-size(28px);
-    text-align: left !important;
+  @include font-size(28px);
+  text-align: left !important;
 
-    @include mq($phablet) {
-        @include font-size(16px);
-    }
+  @include mq($phablet) {
+    @include font-size(16px);
+  }
 }
 
 .button {
-    display: block;
-    margin-top: 20px;
+  display: block;
+  margin-top: 20px;
 
-    @include mq($tablet-large) {
-        margin: 20px auto 0;
-    }
+  @include mq($tablet-large) {
+    margin: 20px auto 0;
+  }
 
-    @include mq($tablet-large) {
-        @include font-size(22px);
-    }
+  @include mq($tablet-large) {
+    @include font-size(22px);
+  }
 
-    @include mq($phablet) {
-        @include font-size(18px);
-        margin-top: 10px;
-    }
+  @include mq($phablet) {
+    @include font-size(18px);
+    margin-top: 10px;
+  }
 
-    @include mq($phone) {
-        @include font-size(14px);
-    }
+  @include mq($phone) {
+    @include font-size(14px);
+  }
 }
