@@ -10,7 +10,7 @@ import { FC, ReactNode } from "react";
 import ProviderLayout from "@components/layout/ProviderLayout";
 import getConfig from "../../next-seo.config";
 
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -23,17 +23,19 @@ type Props = Readonly<{
 }>;
 
 export const metadata: Metadata = getConfig();
+
 export const viewport: Viewport = {
-  themeColor: "#5edada",
+  themeColor: "#0071B8",
 };
 
 const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en">
-      <body >
+      <body>
         <ProviderLayout>{children}</ProviderLayout>
-        <SpeedInsights />
       </body>
+      <GoogleAnalytics gaId="G-56JE062RYD" />
+      <GoogleTagManager gtmId="GTM-5MW5SMPF" />
     </html>
   );
 };

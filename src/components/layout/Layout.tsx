@@ -17,79 +17,103 @@ import HomeIcon from "@img/icons/home.svg";
 import { usePathname } from "next/navigation";
 
 type Props = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 const RalewayFont = Raleway({
-    subsets: ["cyrillic"],
-    display: "swap",
-    weight: ["400", "500", "600", '700'],
+  subsets: ["cyrillic"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 const PlayfairDisplayFont = Playfair_Display({
-    subsets: ["latin"],
-    display: "swap",
-    weight: ["400", "500", "600", '700'],
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 const montserrat = Montserrat({
-    subsets: ["latin"],
-    display: "swap",
-    weight: ["400", "500", "600", '700'],
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 const Layout: FC<Props> = ({ children }) => {
-    const [isSticky, setIsSticky] = useState<boolean>(false);
-    const [headerHeight, setHeaderHeight] = useState<number | undefined>(0);
+  const [isSticky, setIsSticky] = useState<boolean>(false);
+  const [headerHeight, setHeaderHeight] = useState<number | undefined>(0);
 
-    const headerRef = useRef<HTMLElement>(null);
+  const [showVideo, setShowVideo] = useState(false);
+  const [videoEnded, setVideoEnded] = useState(false);
 
-    const dispatch = useAppDispatch();
+  const headerRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-    const isOnline = useOnlineStatus();
-    const hasWindow = useHasWindow();
+  const dispatch = useAppDispatch();
 
-    const currentPath = usePathname();
+  const isOnline = useOnlineStatus();
+  const hasWindow = useHasWindow();
 
-    useEffect(() => {
-        setTimeout(() => {
-            dispatch(hideLoader());
-            Aos.init({ duration: 500, once: true });
-            window.scrollTo(0, 0);
-            localStorage.removeItem('isApplicationSent')
-            window.addEventListener('scroll', () => {
-                setHeaderHeight(headerRef.current?.offsetHeight);
+  const currentPath = usePathname();
 
-                if (window.scrollY > 0) {
-                    setIsSticky(true);
-                } else {
-                    setIsSticky(false);
-                }
-            });
-        }, 2000);
-    }, [dispatch]);
+  const handleVideoEnd = () => {
+    setVideoEnded(true);
+  };
 
-    return (
-        <div className={`next-layout ${RalewayFont.className}`}>
-            <Loader />
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(hideLoader());
+      Aos.init({ duration: 500, once: true });
+      window.scrollTo(0, 0);
+      localStorage.removeItem("isApplicationSent");
+      setShowVideo(true);
+      window.addEventListener("scroll", () => {
+        setHeaderHeight(headerRef.current?.offsetHeight);
 
-            {isOnline && hasWindow && (
-                <>
-                    <div style={{ flex: "1 0 auto" }}>
-                        <Header isSticky={isSticky} headerRef={headerRef} />
-                        <main style={{ zIndex: 99, paddingTop: isSticky ? headerHeight : 0 }}>{children}</main>
-                    </div>
-                    <Footer />
-                </>
-            )}
+        if (window.scrollY > 0) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      });
+    }, 2000);
+  }, [dispatch]);
 
-            {!isOnline && hasWindow && (
-                <>
-                    <LostConnection />
-                </>
-            )}
-        </div>
-    );
+  return (
+    <div className={`next-layout ${RalewayFont.className}`}>
+      <Loader />
+      {showVideo && (
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          className={`loadingVideo ${videoEnded ? "loadingVideoHide" : ""}`}
+          onEnded={handleVideoEnd}
+        >
+          <source src="/videos/preview.mp4" />
+        </video>
+      )}
+
+      {isOnline && hasWindow && (
+        <>
+          <div style={{ flex: "1 0 auto" }}>
+            <Header isSticky={isSticky} headerRef={headerRef} />
+            <main
+              style={{ zIndex: 99, paddingTop: isSticky ? headerHeight : 0 }}
+            >
+              {children}
+            </main>
+          </div>
+          <Footer />
+        </>
+      )}
+
+      {!isOnline && hasWindow && (
+        <>
+          <LostConnection />
+        </>
+      )}
+    </div>
+  );
 };
 
 export default Layout;

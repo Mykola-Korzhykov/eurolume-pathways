@@ -11,6 +11,7 @@
     "preinstall": "npm install --platform=linux --arch=x64 --target=20x sharp@0.32.6"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.0",
     "@reduxjs/toolkit": "^2.6.1",
     "@types/react-image-gallery": "^1.2.4",
     "@vercel/speed-insights": "^1.2.0",

@@ -4,5 +4,21 @@
 
 // Swiper
 .swiper-wrapper {
-    padding: 6px 5px 28px 0;
+  padding: 6px 5px 28px 0;
+}
+
+.loadingVideo {
+  @include fade(in);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 20000;
+  background: #000;
+}
+
+.loadingVideoHide {
+  @include fade(out);
 }
