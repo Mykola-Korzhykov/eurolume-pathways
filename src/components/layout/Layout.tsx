@@ -55,17 +55,16 @@ const Layout: FC<Props> = ({ children }) => {
 
   const currentPath = usePathname();
 
-  const handleVideoEnd = () => {
-    setVideoEnded(true);
-  };
-
   useEffect(() => {
     setTimeout(() => {
       dispatch(hideLoader());
       Aos.init({ duration: 500, once: true });
       window.scrollTo(0, 0);
       localStorage.removeItem("isApplicationSent");
+
       setShowVideo(true);
+      document.body.classList.add("scroll-lock");
+
       window.addEventListener("scroll", () => {
         setHeaderHeight(headerRef.current?.offsetHeight);
 
@@ -78,6 +77,11 @@ const Layout: FC<Props> = ({ children }) => {
     }, 2000);
   }, [dispatch]);
 
+  const handleVideoEnd = () => {
+    setVideoEnded(true);
+    document.body.classList.remove("scroll-lock");
+  };
+
   return (
     <div className={`next-layout ${RalewayFont.className}`}>
       <Loader />
@@ -85,6 +89,7 @@ const Layout: FC<Props> = ({ children }) => {
         <video
           ref={videoRef}
           autoPlay
+          playsInline
           muted
           className={`loadingVideo ${videoEnded ? "loadingVideoHide" : ""}`}
           onEnded={handleVideoEnd}
