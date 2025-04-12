@@ -5,6 +5,14 @@
   @include mq($tablet-large) {
     background: url("/img/about.png") no-repeat center top / cover;
     margin-bottom: $section-gutter;
+
+    @include mq($tablet-large) {
+      margin-bottom: 80px;
+    }
+
+    @include mq($phone) {
+      margin-bottom: 64px;
+    }
   }
 }
 
