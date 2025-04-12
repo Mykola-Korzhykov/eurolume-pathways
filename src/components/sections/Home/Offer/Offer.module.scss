@@ -1,98 +1,98 @@
 /* ---- Offer ---- */
-@import '@resources';
+@import "@resources";
 
 .slogan {
+  @include font-size(26px);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+
+  @include mq($tablet-large) {
     @include font-size(26px);
-    text-transform: uppercase;
-    margin-bottom: 5px;
+  }
 
-    @include mq($tablet-large) {
-        @include font-size(26px);
-    }
-
-    @include mq($phone) {
-        @include font-size(20px);
-    }
+  @include mq($phone) {
+    @include font-size(20px);
+  }
 }
 
 .title {
-    & span {
-        color: $theme-color;
-    }
+  & span {
+    color: $theme-color;
+  }
 
-    @include mq($tablet-large) {
-        @include font-size(68px);
-    }
+  @include mq($tablet-large) {
+    @include font-size(68px);
+  }
 
-    @include mq($tablet) {
-        @include font-size(52px);
-    }
+  @include mq($tablet) {
+    @include font-size(52px);
+  }
 
-    @include mq($phablet) {
-        @include font-size(48px);
-    }
+  @include mq($phablet) {
+    @include font-size(48px);
+  }
 
-    @include mq($phone) {
-        @include font-size(42px);
-    }
+  @include mq($phone) {
+    @include font-size(42px);
+  }
 }
 
 .description {
-    margin-top: 10px;
+  margin-top: 10px;
 
-    @include mq($tablet-large) {
-        @include font-size(26px);
-    }
+  @include mq($tablet-large) {
+    @include font-size(26px);
+  }
 
-    @include mq($tablet) {
-        @include font-size(24px);
-    }
+  @include mq($tablet) {
+    @include font-size(24px);
+  }
 
-    @include mq($phablet) {
-        @include font-size(22px);
-    }
+  @include mq($phablet) {
+    @include font-size(22px);
+  }
 
-    @include mq($phone) {
-        @include font-size(18px);
-    }
+  @include mq($phone) {
+    @include font-size(18px);
+  }
 }
 
 .wrapper {
-    text-align: center;
-    margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 0;
+  margin-bottom: 100px;
+  background: url("/img/header/background.png") no-repeat bottom center / cover;
+
+  @include mq($tablet-large) {
+    padding: 50px 0;
+  }
+
+  @include mq($phone) {
     padding: 100px 0;
-    margin-bottom: 100px;
-    background: url('/img/header/background.png') no-repeat left bottom / cover;
+  }
 
-    @include mq($tablet-large) {
-        padding: 50px 0;
-    }
+  @include mq($tablet-large) {
+    margin-bottom: 80px;
+  }
 
-    @include mq($phone) {
-        padding: 100px 0;
-    }
-
-    @include mq($tablet-large) {
-        margin-bottom: 80px;
-    }
-
-    @include mq($phone) {
-        margin-bottom: 64px;
-    }
+  @include mq($phone) {
+    margin-bottom: 64px;
+  }
 }
 
 .button {
-    margin: 40px auto 0;
+  margin: 40px auto 0;
 
-    @include mq($tablet-large) {
-        @include font-size(22px);
-    }
+  @include mq($tablet-large) {
+    @include font-size(22px);
+  }
 
-    @include mq($phablet) {
-        @include font-size(18px);
-    }
+  @include mq($phablet) {
+    @include font-size(18px);
+  }
 
-    @include mq($phone) {
-        @include font-size(14px);
-    }
+  @include mq($phone) {
+    @include font-size(14px);
+  }
 }
