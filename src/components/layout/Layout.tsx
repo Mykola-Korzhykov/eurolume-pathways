@@ -62,8 +62,8 @@ const Layout: FC<Props> = ({ children }) => {
       window.scrollTo(0, 0);
       localStorage.removeItem("isApplicationSent");
 
-      setShowVideo(true);
-      document.body.classList.add("scroll-lock");
+      // setShowVideo(true);
+      // document.body.classList.add("scroll-lock");
 
       window.addEventListener("scroll", () => {
         setHeaderHeight(headerRef.current?.offsetHeight);
@@ -85,7 +85,7 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <div className={`next-layout ${RalewayFont.className}`}>
       <Loader />
-      {showVideo && (
+      {/* {showVideo && (
         <video
           ref={videoRef}
           autoPlay
@@ -96,7 +96,7 @@ const Layout: FC<Props> = ({ children }) => {
         >
           <source src="/videos/preview.mp4" />
         </video>
-      )}
+      )} */}
 
       {isOnline && hasWindow && (
         <>

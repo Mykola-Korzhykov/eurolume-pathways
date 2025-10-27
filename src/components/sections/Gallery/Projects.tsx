@@ -8,6 +8,26 @@ import styles from './Gallery.module.scss'
 
 const images = [
     {
+        original: "/videos/1.mp4",
+        thumbnail: "/videos/1.png",
+        renderItem: () => (
+          <video controls muted autoPlay>
+            <source src="/videos/1.mp4" type="video/mp4" />     
+            </video>
+        ),
+        description: 'Video 1',
+    },
+    {
+        original: "/videos/2.mp4",
+        thumbnail: "/videos/2.png",
+        renderItem: () => (
+          <video controls muted autoPlay>
+            <source src="/videos/2.mp4" type="video/mp4" />     
+            </video>
+        ),
+        description: 'Video 2',
+    },
+    {
         original: "/img/gallery/projects/1.jpg",
         thumbnail: "/img/gallery/projects/1.jpg",
     },
